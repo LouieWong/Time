@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *titleImage;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UIView *backView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *labelConstraint;
 
 @property (nonatomic)Stories_DayNewsModel *appIndexCellModel;
 - (void)refreshUIwithModel:(Stories_DayNewsModel*)model;

@@ -33,10 +33,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oG4-UX-D5s" firstAttribute="leading" secondItem="x5L-bb-J5B" secondAttribute="trailing" constant="8" id="2cD-Gp-meg"/>
                             <constraint firstItem="oG4-UX-D5s" firstAttribute="top" secondItem="x5L-bb-J5B" secondAttribute="top" constant="-1" id="ITB-b0-91N"/>
                             <constraint firstItem="x5L-bb-J5B" firstAttribute="leading" secondItem="BV1-I8-bvv" secondAttribute="leading" constant="8" id="JK8-9h-n6V"/>
                             <constraint firstAttribute="bottom" secondItem="x5L-bb-J5B" secondAttribute="bottom" constant="13" id="Loh-IU-AVP"/>
+                            <constraint firstAttribute="trailing" secondItem="x5L-bb-J5B" secondAttribute="trailing" constant="91" id="O35-hw-lb2"/>
                             <constraint firstAttribute="bottom" secondItem="oG4-UX-D5s" secondAttribute="bottom" constant="14" id="YDr-iA-Grb"/>
                             <constraint firstAttribute="trailing" secondItem="oG4-UX-D5s" secondAttribute="trailing" constant="8" id="hFp-w1-THb"/>
                             <constraint firstItem="oG4-UX-D5s" firstAttribute="top" secondItem="BV1-I8-bvv" secondAttribute="top" constant="11" id="uGe-zI-2FV"/>
@@ -52,6 +52,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="backView" destination="BV1-I8-bvv" id="8Fr-kr-cmW"/>
+                <outlet property="labelConstraint" destination="O35-hw-lb2" id="nFF-ZG-fjw"/>
                 <outlet property="title" destination="x5L-bb-J5B" id="Lgx-xV-KEF"/>
                 <outlet property="titleImage" destination="oG4-UX-D5s" id="c2I-ZN-8wA"/>
             </connections>

@@ -77,7 +77,6 @@
     _detailImageView.clipsToBounds  = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(detailImageViewTap:)];
     [_detailImageView addGestureRecognizer:tap];
-    
     [_detailImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top);
         make.left.equalTo(self.view.mas_left);
@@ -137,14 +136,23 @@
     _detailWebView.scrollView.showsVerticalScrollIndicator = NO;
     _detailWebView.scrollView.delegate = self;
     
-    
-    [_detailWebView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_detailImageView.mas_bottom);
-        make.bottom.equalTo(_buttonView.mas_top);
-        make.left.equalTo(self.view.mas_left).offset(10);
-        make.right.equalTo(self.view.mas_right).offset(-10);
-    }];
-    [self favoriteYesOrNo];
+//    if (self.detail_DayNewsModel.image == nil) {
+        [_detailWebView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.view.mas_top).offset(200);
+            make.bottom.equalTo(_buttonView.mas_top);
+            make.left.equalTo(self.view.mas_left).offset(10);
+            make.right.equalTo(self.view.mas_right).offset(-10);
+        }];
+//    }else{
+//        [_detailWebView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(self.view.mas_top);
+//            make.bottom.equalTo(_buttonView.mas_top);
+//            make.left.equalTo(self.view.mas_left).offset(10);
+//            make.right.equalTo(self.view.mas_right).offset(-10);
+//        }];
+//
+//    }
+        [self favoriteYesOrNo];
     
 }
 - (void)favoriteYesOrNo
@@ -202,16 +210,29 @@
     int offsetY = _detailWebView.scrollView.contentOffset.y;
     if (offsetY<=_detailImageView.frame.size.height) {
 //        self.navigationController.navigationBarHidden = YES;
-        [_detailImageView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.view.mas_top).offset(-offsetY*1.5);
-        
-        }];
+        _detailImageView.alpha = (1-offsetY/200.0);
+//        if (self.detailImageView.hidden == NO) {
+            [_detailImageView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.view.mas_top).offset(-offsetY);
+            }];
+//        }
+      
         [_buttonView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view.mas_left);
             make.right.equalTo(self.view.mas_right);
             make.bottom.equalTo(self.view.mas_bottom).offset(40);
             make.height.equalTo(@40);
         }];
+        if (_detailImageView.hidden == NO) {
+            [_detailWebView  mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.view.mas_top).offset(200-offsetY);
+            }];
+        }else{
+            [_detailWebView  mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.view.mas_top);
+            }];
+        }
+     
     }else{
         self.navigationController.navigationBarHidden = NO;
 

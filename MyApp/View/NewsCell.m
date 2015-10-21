@@ -35,19 +35,19 @@
 {
     if (model.images ==nil) {
         self.titleImage.hidden = YES;
-        [self.title mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(self.backView.mas_right).offset(-8);
-        }];
+        self.labelConstraint.constant = 8;
+//        [self.title mas_updateConstraints:^(MASConstraintMaker *make) {
+//            
+////            make.width.equalTo(0);
+//            make.trailing.equalTo(self.backView.mas_trailing).offset(-8);
+//            
+//        }];
     }else{
         NSString *url = model.images[0];
         [self.titleImage sd_setImageWithURL:[NSURL URLWithString:url]];
+        
     }
     self.title.text = model.title;
-//    self.titleImage.hidden = NO;
-//    [self.title mas_updateConstraints:^(MASConstraintMaker *make) {
-//        make.right.equalTo(self.backView.mas_right);
-//    }];
-
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

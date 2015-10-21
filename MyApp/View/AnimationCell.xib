@@ -41,11 +41,10 @@
                                     <constraint firstAttribute="width" constant="90" id="t3j-U3-UYI"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pa-G7-wWc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pa-G7-wWc" userLabel="xian">
                                 <rect key="frame" x="1" y="55" width="352" height="2"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="352" id="G5Y-Rx-bSO"/>
                                     <constraint firstAttribute="height" constant="2" id="LMC-cg-NLw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -58,9 +57,10 @@
                             <constraint firstItem="HcN-3j-wAp" firstAttribute="leading" secondItem="Esh-8k-kfY" secondAttribute="leading" constant="8" id="58k-oX-F6M"/>
                             <constraint firstItem="j0g-wA-Hsk" firstAttribute="leading" secondItem="Esh-8k-kfY" secondAttribute="leading" constant="8" id="7zW-ka-7In"/>
                             <constraint firstItem="Ddn-RI-JAN" firstAttribute="top" secondItem="HcN-3j-wAp" secondAttribute="bottom" constant="8" id="9pm-94-7SK"/>
-                            <constraint firstItem="HcN-3j-wAp" firstAttribute="leading" secondItem="8pa-G7-wWc" secondAttribute="trailing" constant="-345" id="HZ9-eV-7Pl"/>
                             <constraint firstItem="Ddn-RI-JAN" firstAttribute="leading" secondItem="j0g-wA-Hsk" secondAttribute="trailing" constant="8" id="JLV-Ry-PhJ"/>
                             <constraint firstAttribute="trailing" secondItem="HcN-3j-wAp" secondAttribute="trailing" constant="8" id="MEp-th-SSk"/>
+                            <constraint firstItem="8pa-G7-wWc" firstAttribute="leading" secondItem="HcN-3j-wAp" secondAttribute="leading" constant="-7" id="OZ3-yc-Bf1"/>
+                            <constraint firstItem="8pa-G7-wWc" firstAttribute="trailing" secondItem="HcN-3j-wAp" secondAttribute="trailing" constant="6" id="VlH-Uw-fLt"/>
                             <constraint firstItem="HcN-3j-wAp" firstAttribute="top" secondItem="Esh-8k-kfY" secondAttribute="top" constant="13" id="e7Q-Y1-Ipe"/>
                             <constraint firstAttribute="trailing" secondItem="Ddn-RI-JAN" secondAttribute="trailing" constant="8" id="fG0-Ce-3TN"/>
                             <constraint firstAttribute="bottom" secondItem="j0g-wA-Hsk" secondAttribute="bottom" constant="8" id="kJC-hO-U6W"/>

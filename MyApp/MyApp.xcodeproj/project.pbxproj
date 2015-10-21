@@ -178,6 +178,7 @@
 		897367561BCCF5BB00D595B8 /* commentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897367551BCCF5BB00D595B8 /* commentViewController.m */; };
 		897367D31BCD4C0500D595B8 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 897367D11BCD4C0500D595B8 /* CommentCell.m */; };
 		897367D41BCD4C0500D595B8 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 897367D21BCD4C0500D595B8 /* CommentCell.xib */; };
+		89ABB46E1BD7706700549846 /* Handwriting.m in Sources */ = {isa = PBXBuildFile; fileRef = 89ABB46D1BD7706700549846 /* Handwriting.m */; };
 		89D513C91BCE5B1700DE083E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D513C81BCE5B1700DE083E /* libsqlite3.dylib */; };
 		89D513D61BCE5B3C00DE083E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D513CC1BCE5B3C00DE083E /* FMDatabase.m */; };
 		89D513D71BCE5B3C00DE083E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D513CE1BCE5B3C00DE083E /* FMDatabaseAdditions.m */; };
@@ -527,6 +528,8 @@
 		897367D01BCD4C0500D595B8 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
 		897367D11BCD4C0500D595B8 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
 		897367D21BCD4C0500D595B8 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		89ABB46C1BD7706700549846 /* Handwriting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Handwriting.h; path = loading/Handwriting.h; sourceTree = "<group>"; };
+		89ABB46D1BD7706700549846 /* Handwriting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Handwriting.m; path = loading/Handwriting.m; sourceTree = "<group>"; };
 		89D513C81BCE5B1700DE083E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		89D513CB1BCE5B3C00DE083E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		89D513CC1BCE5B3C00DE083E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -785,6 +788,7 @@
 		8953DE721BCB7DB50018E993 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				89ABB46B1BD7703200549846 /* loading */,
 				89D513EC1BCE8C4B00DE083E /* zhenge */,
 				89D513CA1BCE5B3C00DE083E /* fmdb */,
 				897366FB1BCCB64700D595B8 /* umeng_ios_social_sdk_4.2.3_arm64_custom */,
@@ -1276,6 +1280,15 @@
 			name = "评论Cell";
 			sourceTree = "<group>";
 		};
+		89ABB46B1BD7703200549846 /* loading */ = {
+			isa = PBXGroup;
+			children = (
+				89ABB46C1BD7706700549846 /* Handwriting.h */,
+				89ABB46D1BD7706700549846 /* Handwriting.m */,
+			);
+			name = loading;
+			sourceTree = "<group>";
+		};
 		89D513CA1BCE5B3C00DE083E /* fmdb */ = {
 			isa = PBXGroup;
 			children = (
@@ -1598,6 +1611,7 @@
 				8953DF551BCB7DB50018E993 /* JSONModelArray.m in Sources */,
 				8960EC241BCF4E9F0003F362 /* AssortmentModel.m in Sources */,
 				8953DF241BCB7DB50018E993 /* assortmentController.m in Sources */,
+				89ABB46E1BD7706700549846 /* Handwriting.m in Sources */,
 				89D513DE1BCE65A100DE083E /* CachManager.m in Sources */,
 				89D5A0171BCFD8C80063659D /* SettingController.m in Sources */,
 				8953DF6C1BCB7DB50018E993 /* MASCompositeConstraint.m in Sources */,
@@ -1790,6 +1804,7 @@
 					"$(PROJECT_DIR)/ThirdPart/umeng_ios_social_sdk_4.2.3_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 				);
 				INFOPLIST_FILE = MyApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1814,6 +1829,7 @@
 					"$(PROJECT_DIR)/ThirdPart/umeng_ios_social_sdk_4.2.3_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 				);
 				INFOPLIST_FILE = MyApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
