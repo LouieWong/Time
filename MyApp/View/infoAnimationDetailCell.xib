@@ -27,7 +27,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86M-tS-I50" userLabel="内容">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="86M-tS-I50" userLabel="内容">
                                 <rect key="frame" x="8" y="64" width="401" height="114"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -52,9 +52,9 @@
                             <constraint firstItem="Sx9-IP-0l9" firstAttribute="top" secondItem="41t-gK-jit" secondAttribute="top" constant="8" id="JXt-fR-iQm"/>
                             <constraint firstItem="Sx9-IP-0l9" firstAttribute="leading" secondItem="lWL-CU-60d" secondAttribute="leading" id="NUh-qY-ahw"/>
                             <constraint firstAttribute="bottom" secondItem="86M-tS-I50" secondAttribute="bottom" constant="8" id="Phq-la-Q26"/>
-                            <constraint firstItem="Sx9-IP-0l9" firstAttribute="width" secondItem="lWL-CU-60d" secondAttribute="width" id="W2J-W3-Pez"/>
                             <constraint firstItem="86M-tS-I50" firstAttribute="top" secondItem="lWL-CU-60d" secondAttribute="bottom" id="aOu-ze-a1K"/>
                             <constraint firstItem="Sx9-IP-0l9" firstAttribute="leading" secondItem="41t-gK-jit" secondAttribute="leading" constant="8" id="eXg-SA-QEO"/>
+                            <constraint firstItem="Sx9-IP-0l9" firstAttribute="trailing" secondItem="86M-tS-I50" secondAttribute="trailing" id="tT3-ej-cCm"/>
                             <constraint firstItem="86M-tS-I50" firstAttribute="leading" secondItem="lWL-CU-60d" secondAttribute="leading" id="uIz-JT-sye"/>
                         </constraints>
                     </view>

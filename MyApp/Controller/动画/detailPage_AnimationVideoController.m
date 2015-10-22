@@ -39,6 +39,11 @@
     [self createPlayer];
     [self createDetailTableView];
 }
+//隐藏状态栏
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
 - (void)createDetailTableView
 {
     self.detailTableView = [[UITableView alloc]init];
@@ -89,7 +94,7 @@
     
     if (!self.player) {
         CGFloat width = [UIScreen mainScreen].bounds.size.width;
-        self.player = [[KRVideoPlayerController alloc] initWithFrame:CGRectMake(0,64, width, width*(9.0/16.0))];
+        self.player = [[KRVideoPlayerController alloc] initWithFrame:CGRectMake(0,44, width, width*(9.0/16.0))];
         __weak typeof(self)weakSelf = self;
         [self.player setDimissCompleteBlock:^{
             weakSelf.player = nil;
@@ -118,7 +123,7 @@
     
     RootTabController * tabbar =(RootTabController *) window.rootViewController;
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.1 animations:^{
         tabbar.customTabbarView.alpha = 1.0;
         tabbar.customTabbarView.hidden = NO;
         if (_player) {
@@ -140,6 +145,7 @@
     }
     cell.titleLabel.text = self.anime_AnimationVideoModel.Name;
     cell.briefLabel.text = self.anime_AnimationVideoModel.Brief;
+    NSLog(@"%@",self.anime_AnimationVideoModel.Brief);
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
