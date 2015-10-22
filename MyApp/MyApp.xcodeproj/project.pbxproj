@@ -137,7 +137,6 @@
 		8953DFE01BCB7F700018E993 /* loading021.png in Resources */ = {isa = PBXBuildFile; fileRef = 8953DFCA1BCB7F700018E993 /* loading021.png */; };
 		8953DFE21BCB98E10018E993 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8953DFE11BCB98E10018E993 /* MediaPlayer.framework */; };
 		8953DFE41BCB98E70018E993 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8953DFE31BCB98E70018E993 /* AVFoundation.framework */; };
-		895AE0F11BCBC85F008E0FDA /* iOS Simulator Screen Shot 2015年10月12日 下午6.51.53.png in Resources */ = {isa = PBXBuildFile; fileRef = 895AE0F01BCBC85F008E0FDA /* iOS Simulator Screen Shot 2015年10月12日 下午6.51.53.png */; };
 		895AE0F71BCBE6EF008E0FDA /* AnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 895AE0F51BCBE6EF008E0FDA /* AnimationCell.m */; };
 		895AE0F81BCBE6EF008E0FDA /* AnimationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 895AE0F61BCBE6EF008E0FDA /* AnimationCell.xib */; };
 		8960EC241BCF4E9F0003F362 /* AssortmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8960EC231BCF4E9F0003F362 /* AssortmentModel.m */; };
@@ -179,6 +178,8 @@
 		897367D31BCD4C0500D595B8 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 897367D11BCD4C0500D595B8 /* CommentCell.m */; };
 		897367D41BCD4C0500D595B8 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 897367D21BCD4C0500D595B8 /* CommentCell.xib */; };
 		89ABB46E1BD7706700549846 /* Handwriting.m in Sources */ = {isa = PBXBuildFile; fileRef = 89ABB46D1BD7706700549846 /* Handwriting.m */; };
+		89ABB4731BD7C65F00549846 /* infoAnimationDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89ABB4711BD7C65E00549846 /* infoAnimationDetailCell.m */; };
+		89ABB4741BD7C65F00549846 /* infoAnimationDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89ABB4721BD7C65E00549846 /* infoAnimationDetailCell.xib */; };
 		89D513C91BCE5B1700DE083E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D513C81BCE5B1700DE083E /* libsqlite3.dylib */; };
 		89D513D61BCE5B3C00DE083E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D513CC1BCE5B3C00DE083E /* FMDatabase.m */; };
 		89D513D71BCE5B3C00DE083E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D513CE1BCE5B3C00DE083E /* FMDatabaseAdditions.m */; };
@@ -444,7 +445,6 @@
 		8953DFCA1BCB7F700018E993 /* loading021.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading021.png; sourceTree = "<group>"; };
 		8953DFE11BCB98E10018E993 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		8953DFE31BCB98E70018E993 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		895AE0F01BCBC85F008E0FDA /* iOS Simulator Screen Shot 2015年10月12日 下午6.51.53.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS Simulator Screen Shot 2015年10月12日 下午6.51.53.png"; sourceTree = "<group>"; };
 		895AE0F41BCBE6EF008E0FDA /* AnimationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationCell.h; sourceTree = "<group>"; };
 		895AE0F51BCBE6EF008E0FDA /* AnimationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationCell.m; sourceTree = "<group>"; };
 		895AE0F61BCBE6EF008E0FDA /* AnimationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationCell.xib; sourceTree = "<group>"; };
@@ -530,6 +530,9 @@
 		897367D21BCD4C0500D595B8 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		89ABB46C1BD7706700549846 /* Handwriting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Handwriting.h; path = loading/Handwriting.h; sourceTree = "<group>"; };
 		89ABB46D1BD7706700549846 /* Handwriting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Handwriting.m; path = loading/Handwriting.m; sourceTree = "<group>"; };
+		89ABB4701BD7C65E00549846 /* infoAnimationDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = infoAnimationDetailCell.h; sourceTree = "<group>"; };
+		89ABB4711BD7C65E00549846 /* infoAnimationDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = infoAnimationDetailCell.m; sourceTree = "<group>"; };
+		89ABB4721BD7C65E00549846 /* infoAnimationDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = infoAnimationDetailCell.xib; sourceTree = "<group>"; };
 		89D513C81BCE5B1700DE083E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		89D513CB1BCE5B3C00DE083E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		89D513CC1BCE5B3C00DE083E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -603,7 +606,6 @@
 		8953DE141BCB7D9E0018E993 = {
 			isa = PBXGroup;
 			children = (
-				895AE0F01BCBC85F008E0FDA /* iOS Simulator Screen Shot 2015年10月12日 下午6.51.53.png */,
 				895AE0E41BCBA22A008E0FDA /* FrameWork */,
 				8953DE461BCB7DB50018E993 /* Controller */,
 				8953DE611BCB7DB50018E993 /* Extra */,
@@ -1145,9 +1147,10 @@
 		895AE0F31BCBE6B4008E0FDA /* 动画Cell */ = {
 			isa = PBXGroup;
 			children = (
-				895AE0F41BCBE6EF008E0FDA /* AnimationCell.h */,
-				895AE0F51BCBE6EF008E0FDA /* AnimationCell.m */,
-				895AE0F61BCBE6EF008E0FDA /* AnimationCell.xib */,
+				89ABB46F1BD7C5E200549846 /* 动画首页Cell */,
+				89ABB4701BD7C65E00549846 /* infoAnimationDetailCell.h */,
+				89ABB4711BD7C65E00549846 /* infoAnimationDetailCell.m */,
+				89ABB4721BD7C65E00549846 /* infoAnimationDetailCell.xib */,
 			);
 			name = "动画Cell";
 			sourceTree = "<group>";
@@ -1287,6 +1290,16 @@
 				89ABB46D1BD7706700549846 /* Handwriting.m */,
 			);
 			name = loading;
+			sourceTree = "<group>";
+		};
+		89ABB46F1BD7C5E200549846 /* 动画首页Cell */ = {
+			isa = PBXGroup;
+			children = (
+				895AE0F41BCBE6EF008E0FDA /* AnimationCell.h */,
+				895AE0F51BCBE6EF008E0FDA /* AnimationCell.m */,
+				895AE0F61BCBE6EF008E0FDA /* AnimationCell.xib */,
+			);
+			name = "动画首页Cell";
 			sourceTree = "<group>";
 		};
 		89D513CA1BCE5B3C00DE083E /* fmdb */ = {
@@ -1492,7 +1505,7 @@
 				8953DFD11BCB7F700018E993 /* loading006.png in Resources */,
 				8953DFE01BCB7F700018E993 /* loading021.png in Resources */,
 				8953DFD61BCB7F700018E993 /* loading011.png in Resources */,
-				895AE0F11BCBC85F008E0FDA /* iOS Simulator Screen Shot 2015年10月12日 下午6.51.53.png in Resources */,
+				89ABB4741BD7C65F00549846 /* infoAnimationDetailCell.xib in Resources */,
 				8953DF2F1BCB7DB50018E993 /* Placehold.png in Resources */,
 				8973673B1BCCB64700D595B8 /* UMShareEditViewController.xib in Resources */,
 				8953DFD31BCB7F700018E993 /* loading008.png in Resources */,
@@ -1564,6 +1577,7 @@
 				8953DF301BCB7DB50018E993 /* UIButton+Custom.m in Sources */,
 				8953DF5C1BCB7DB50018E993 /* JSONKeyMapper.m in Sources */,
 				8960EC2D1BCF569A0003F362 /* ThreeViewController.m in Sources */,
+				89ABB4731BD7C65F00549846 /* infoAnimationDetailCell.m in Sources */,
 				8960EC361BCF56BE0003F362 /* SixViewController.m in Sources */,
 				8953DF7F1BCB7DB50018E993 /* UIButton+WebCache.m in Sources */,
 				8953DF731BCB7DB50018E993 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,

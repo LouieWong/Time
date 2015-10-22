@@ -13,16 +13,14 @@
 #import "Masonry.h"
 #import "helper.h"
 #import "RootTabController.h"
-@interface detailPage_AnimationVideoController ()
+#import "infoAnimationDetailCell.h"
+@interface detailPage_AnimationVideoController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic) KRVideoPlayerController *player;
 @property (nonatomic) UIImageView *imageView;
 @property (nonatomic) UIButton *playerButton;
-@property (nonatomic) UIView *BriefView;
-@property (nonatomic) UILabel *titleLabel;
-@property (nonatomic) UILabel *colorlabel;
-@property (nonatomic) UILabel *briefLabel;
 
+@property (nonatomic) UITableView *detailTableView;
 @end
 
 @implementation detailPage_AnimationVideoController
@@ -39,7 +37,21 @@
 {
     
     [self createPlayer];
-    [self addBriefView];
+    [self createDetailTableView];
+}
+- (void)createDetailTableView
+{
+    self.detailTableView = [[UITableView alloc]init];
+    _detailTableView.delegate = self;
+    _detailTableView.dataSource = self;
+    [self.view addSubview:_detailTableView];
+    _detailTableView.rowHeight = UITableViewAutomaticDimension;
+    _detailTableView.estimatedRowHeight = 100.0;
+    _detailTableView.backgroundColor = backGroundColor;
+    [_detailTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.imageView.mas_bottom);
+        make.left.and.right.and.bottom.equalTo(self.view);   
+    }];
 }
 - (void)createPlayer
 {
@@ -65,48 +77,6 @@
         make.height.equalTo(@80);
         make.centerX.equalTo(self.imageView.mas_centerX);
         make.centerY.equalTo(self.imageView.mas_centerY);
-    }];
-    
-}
-- (void)addBriefView{
-    self.BriefView = [[UIView alloc]init];
-    _BriefView.backgroundColor = [UIColor whiteColor];
-    _titleLabel = [[UILabel alloc]init];
-    _titleLabel.text =  self.anime_AnimationVideoModel.Name;
-    _titleLabel.font =  [UIFont boldSystemFontOfSize:24];
-    _colorlabel = [[UILabel alloc]init];
-    _colorlabel.backgroundColor = lightGray;
-    _briefLabel = [[UILabel alloc]init];
-    _briefLabel.text = self.anime_AnimationVideoModel.Brief;
-    _briefLabel.numberOfLines = 0;
-    _briefLabel.font = [UIFont systemFontOfSize:14];
-    [self.BriefView addSubview:_titleLabel];
-    [self.BriefView addSubview:_colorlabel];
-    [self.BriefView addSubview:_briefLabel];
-    [self.view addSubview:_BriefView];
-    [_BriefView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_imageView.mas_bottom).offset(10);
-        make.left.equalTo(self.view.mas_left).offset(10);
-        make.right.equalTo(self.view.mas_right).offset(-10);
-        make.height.equalTo(@300);
-    }];
-    [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_BriefView.mas_top);
-        make.left.equalTo(_BriefView.mas_left).offset(10);
-        make.right.equalTo(_BriefView.mas_right).offset(-10);
-        make.height.equalTo(@50);
-    }];
-    [_colorlabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_titleLabel.mas_bottom);
-        make.left.equalTo(_titleLabel.mas_left);
-        make.right.equalTo(_titleLabel.mas_right);
-        make.height.equalTo(@3);
-    }];
-    [_briefLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_colorlabel.mas_bottom);
-        make.left.equalTo(_BriefView.mas_left).offset(10);
-        make.right.equalTo(_BriefView.mas_right).offset(-10);
-        make.bottom.equalTo(_BriefView.mas_bottom);
     }];
     
 }
@@ -157,6 +127,21 @@
         
     } completion:^(BOOL finished) {
     }];
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    infoAnimationDetailCell *cell = [self.detailTableView dequeueReusableCellWithIdentifier:infoAnimationDetailCellID];
+    if (cell == nil) {
+        cell= [[NSBundle mainBundle]loadNibNamed:@"infoAnimationDetailCell" owner:nil options:0][0];
+    }
+    cell.titleLabel.text = self.anime_AnimationVideoModel.Name;
+    cell.briefLabel.text = self.anime_AnimationVideoModel.Brief;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {
