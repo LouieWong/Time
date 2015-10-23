@@ -44,6 +44,7 @@
 
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:nil];
     self.navigationItem.backBarButtonItem = item;
+//    [self fetchData];
 
 }
 - (void)initUI
@@ -206,6 +207,26 @@
 - (void)fetchData
 {
     [super fetchData];
+//    if (![self fetchLocalData]) {
+////        [self fetchWebData];
+//    }
+//    [self fetchWData];
+}
+- (BOOL)fetchLocalData
+{
+    if ([CachManager isCacheDataInvalid:kIndexUrl]) {
+        id respondData = [CachManager readDataAtUrl:kIndexUrl];
+        [self parseCacheData:respondData];
+        [self.indexTableView reloadData];
+        return YES;
+    }
+    return NO;
+}
+- (void)parseCacheData:(id)respondData
+{
+    //解析数据，刷新表
+    NSLog(@"%@",respondData);
+    self.dataCellArray = (NSMutableArray*)[Stories_DayNewsModel parseRespondData:(NSDictionary*)respondData];
 }
 #pragma mark - 轮播图点击事件
 - (void)imageViewTap:(UITapGestureRecognizer*)tap
@@ -228,10 +249,12 @@
 
     [manager GET:kIndexUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         _dayNewsModel = [[DayNewsModel alloc]initWithData:responseObject error:nil];
+//        NSLog(@"%@",responseObject);
         [self.dataCellArray removeAllObjects];
         [self.dataCellArray addObjectsFromArray:_dayNewsModel.stories];
         [self.dataScrollArray removeAllObjects];
         [self.dataScrollArray addObjectsFromArray:_dayNewsModel.top_stories];
+        
         for (NSInteger i =0; i<_dataScrollArray.count; i++) {
             _topStories_DayNewsModel = _dataScrollArray[i];
             UIImageView *imageView = (UIImageView*)[self.indexTableView.tableHeaderView viewWithTag:300+i];
@@ -239,6 +262,10 @@
             UILabel *label = (UILabel*)[imageView viewWithTag:imageView.tag+100];
             label.text = _topStories_DayNewsModel.title;
         }
+        [CachManager saveData:responseObject atUrl:[NSString stringWithFormat:kOldIndexUrl,_dayNewsModel.date]];
+//        NSLog(@"%@",responseObject);
+//        NSLog(@"%ld",[CachManager cacheSize]);
+
         [self.indexTableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"获取失败");
@@ -250,7 +277,8 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager GET:[NSString stringWithFormat:kOldIndexUrl,_dayNewsModel.date] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        _dayNewsModel = [[DayNewsModel alloc]initWithData:responseObject error:nil];
+        
+                _dayNewsModel = [[DayNewsModel alloc]initWithData:responseObject error:nil];
         [self.dataCellArray addObjectsFromArray:_dayNewsModel.stories];
         NSLog(@"%ld",self.dataCellArray.count);
         [self.indexTableView reloadData];

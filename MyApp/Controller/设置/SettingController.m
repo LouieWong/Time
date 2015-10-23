@@ -78,7 +78,7 @@
     return fileSize/1024.0/1024.0;
 }
 - (void)initData {
-    self.dataArray = [NSMutableArray arrayWithObjects:@[@"清除缓存"], @[@"感谢你使用本应用",@"版本 V1.0.1"], nil];
+    self.dataArray = [NSMutableArray arrayWithObjects:@[@"清除缓存"], nil];
     
     // self.dataArray = [NSMutableArray arrayWithObjects:@[@"推送设置",@"开启推送通知",@"开启关注通知",@"清除缓存", @"推送设置",@"开启推送通知",@"开启关注通知",@"清除缓存", ], @[@"推荐爱限免",@"官方推荐",@"官方微博",@"版本 V1.8.1",@"感谢使用爱限免应用", @"推荐爱限免",@"官方推荐",@"官方微博",@"版本 V1.8.1",@"感谢使用爱限免应用", @"推荐爱限免",@"官方推荐",@"官方微博",@"版本 V1.8.1",@"感谢使用爱限免应用"], nil];
 }

@@ -11,6 +11,7 @@
 #import "UIImage+Blur.h"
 #import "UMSocial.h"
 #import "commentViewController.h"
+#import "CachManager.h"
 @interface DetailController ()<UIWebViewDelegate,UIScrollViewDelegate,UMSocialUIDelegate>
 
 @property (nonatomic)UIWebView *detailWebView;
@@ -265,6 +266,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+//     [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('body')[0].style.background='#2E2E2E'"];
     //我不懂，但是我知道是调整webView里面的图片的,呵呵呵呵
     [webView stringByEvaluatingJavaScriptFromString:
           @"var script = document.createElement('script');"

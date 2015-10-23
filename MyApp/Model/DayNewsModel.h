@@ -12,11 +12,12 @@
 @protocol CommentsModel;
 
 @interface Stories_DayNewsModel : JSONModel
-
++ (NSArray*)parseRespondData:(NSDictionary*)respondData;
 @property (nonatomic,copy) NSArray *images;
 @property (nonatomic,copy) NSNumber *id;
 @property (nonatomic,copy) NSString *ga_prefix;
 @property (nonatomic,copy) NSString *title;
+
 @end
 
 @interface TopStories_DayNewsModel : JSONModel

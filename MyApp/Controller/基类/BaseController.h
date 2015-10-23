@@ -13,6 +13,7 @@
 #import "URL.h"
 #import "UIImage+Blur.h"
 #import "SQLManager.h"
+#import "CachManager.h"
 @interface BaseController : UIViewController
 
 

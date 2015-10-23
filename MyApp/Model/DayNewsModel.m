@@ -19,6 +19,21 @@
 
 @end
 @implementation Stories_DayNewsModel
++ (NSArray*)parseRespondData:(NSDictionary*)respondData
+{
+    NSLog(@"--------------------%@",respondData);
+//    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:respondData options:NSJSONReadingMutableContainers error:nil];
+//    NSLog(@"xxxxxxxxxxxxx%@",dic);
+//    NSDictionary *appListArray =
+//    NSLog(@"%@",appListArray);
+    NSArray *dataArray =  respondData[@"stories"];
+//    for (NSDictionary *dic in dataArray) {
+//        Stories_DayNewsModel *model = [[Stories_DayNewsModel alloc]init];
+//        [model setValuesForKeysWithDictionary:dic];
+//        [appListArray addObject:model];
+//    }
+    return nil  ;
+}
 
 
 @end
